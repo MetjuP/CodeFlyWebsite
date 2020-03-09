@@ -104,7 +104,7 @@ function Start()
 	
 	$('#welcomeImg').fadeIn(4500);
 
-	timer1 = setTimeout('showPage()',6000);
+	timer1 = setTimeout('showPage()',60000);
 	console.log(timer1);
 }
 function showPage()
