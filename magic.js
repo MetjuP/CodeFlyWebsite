@@ -102,7 +102,8 @@ function Start()
 	$('#welcomeImg').fadeOut(1);
 	document.getElementById("welcomeImg").innerHTML = '<img  src="img/logo2.png" alt="">';
 	
-	$('#welcomeImg').fadeIn(5000);
+	$('#welcomeImg').fadeIn(4500);
+	clearTimeout(timer1);
 	timer1 = setTimeout('showPage()',6000);
 }
 function showPage()
