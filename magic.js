@@ -35,6 +35,7 @@ tail[8] = 'kafelek';
 tail[9] = 'kafelek';
 
 let timer = 0;
+let timer1 = 0;
 let currentNumber = 0;
 let animation = 0;
 
@@ -98,14 +99,15 @@ function Start()
 {
 	
 	document.getElementById("wrapper").style.display = 'none';
-	//$('#welcomeImg').fadeOut(1);
+	$('#welcomeImg').fadeOut(1);
 	document.getElementById("welcomeImg").innerHTML = '<img  src="img/logo2.png" alt="">';
 	
-	//$('#welcomeImg').fadeIn(5000);
+	$('#welcomeImg').fadeIn(5000);
 	timer1 = setTimeout('showPage',1000);
 }
 function showPage()
 {
+	clearTimeout(timer1);
 	document.getElementById("wrapper").style.display = 'block';
-	document.getElementById("welcomeImg").style.display = 'none';
+	$("#welcomeScreen").fadeOut(1000);
 }
