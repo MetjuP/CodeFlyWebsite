@@ -98,6 +98,7 @@ function Start()
 {
 	
 	document.getElementById("wrapper").style.display = 'none';
+	$('#welcomeImg').fadeOut(1);
 	document.getElementById("welcomeImg").innerHTML = '<img  src="img/logo2.png" alt="">';
 	
 	$('#welcomeImg').fadeIn(5000);
