@@ -107,6 +107,7 @@ function Start()
 }
 function showPage()
 {
+	console.log('weszło do funkcji')
 	clearTimeout(timer1);
 	document.getElementById("wrapper").style.display = 'block';
 	$("#welcomeScreen").fadeOut(1000);
