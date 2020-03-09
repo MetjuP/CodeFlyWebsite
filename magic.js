@@ -98,9 +98,14 @@ function Start()
 {
 	
 	document.getElementById("wrapper").style.display = 'none';
-	$('#welcomeImg').fadeOut(1);
+	//$('#welcomeImg').fadeOut(1);
 	document.getElementById("welcomeImg").innerHTML = '<img  src="img/logo2.png" alt="">';
 	
-	$('#welcomeImg').fadeIn(5000);
+	//$('#welcomeImg').fadeIn(5000);
+	timer1 = setTimeout('showPage',1000);
+}
+function showPage()
+{
 	document.getElementById("wrapper").style.display = 'block';
+	document.getElementById("welcomeImg").style.display = 'none';
 }
