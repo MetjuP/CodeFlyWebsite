@@ -104,7 +104,7 @@ function Start()
 	
 	$('#welcomeImg').fadeIn(4500);
 
-	timer1 = setTimeout('showPage()',60000);
+	timer1 = setTimeout('showPage()',6000);
 	console.log(timer1);
 }
 function showPage()
@@ -112,5 +112,5 @@ function showPage()
 	console.log('weszło do funkcji')
 	clearTimeout(timer1);
 	document.getElementById("wrapper").style.display = 'block';
-	$("#welcomeScreen").fadeOut(20000);
+	$("#welcomeScreen").fadeOut(2000);
 }
