@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	<title>CodeFly - PWSZ Gniezno</title>
+	<meta name="description" content="Strona koła naukowego CodeFly działającego pod sztandarem Państwowej Wyższej Szkoły Zawodowej w Gnieznie">
+	<meta name="keywords" content="kolo, naukowe,projekty,eventy,PWSZ,Państwowa,Wyższa,Szkoła,Zawodowa,Gniezno">
+	<meta name="author" content="Mateusz Pawlak">
+	<meta http-equiv="X-Ua-Compatible" content="IE=edge">
+	
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/fontello.css">
+	<link rel="stylesheet" href="main.css">
+
+</head>
+<body>
+
+	<header>
+		
+		<nav class="navbar navbar-dark bg-dark navbar-expand-md">
+
+			<a href="#" class="navbar-brand d-md-none"><img src="img/logo2.png" width="60" height="60" alt=""></a>
+
+			<button class="navbar-toggler order-first" type="button" data-toggle="collapse" data-target="#main_menu" aria-controls="main_menu" aria-expanded="false" aria-label='Przełącznik nawigacji'>
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="main_menu">
+				
+				<ul class="navbar-nav mx-auto">
+					
+					<li class="nav-item mx-sm-2 mx-lg-4 mx-xl-5 mt-3 d-md-none align-middle">
+						<a class="nav-link" href="#">Start</a>
+					</li>
+
+					<li class="nav-item mx-sm-2 mx-lg-4 mx-xl-5 mt-3 ">
+						<a class="nav-link" href="#">O nas</a>
+					</li>
+
+					<li class="nav-item dropdown  mx-sm-2 mx-lg-4 mx-xl-5 mt-3">
+						<a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" href="#" id="sub_menu">Projekty</a>
+
+						<div class="dropdown-menu bg-secondary" aria-labell="sub_menu">
+							
+							<a class="dropdown-item " href="#">Aktualne</a>
+							<a class="dropdown-item " href="#">Ukończone</a>
+							<a class="dropdown-item " href="#">W planach</a>
+
+						</div>
+					</li>
+
+					<li class="nav-item d-md-inline-block d-none">
+						
+						<a href="#" class="navbar-brand"><img src="img/logo2.png" width="60" height="60" alt=""></a>
+
+					</li>
+
+					<li class="nav-item dropdown mx-sm-2 mx-lg-4 mx-xl-5 mt-3">
+						<a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" href="#" id="sub_menu1">Wydarzenia</a>
+
+						<div class="dropdown-menu bg-secondary ml-2" aria-labell="sub_menu1">
+							
+							<a class="dropdown-item" href="#">Nadchodzące</a>
+							<a class="dropdown-item" href="#">Już za nami</a>
+							<a class="dropdown-item" href="#">W przyszłości</a>
+
+						</div>
+					</li>
+
+					<li class="nav-item mx-sm-2 mx-lg-4 mx-xl-5 mt-3">
+						<a class="nav-link" href="#">Kontakt</a>
+					</li>
+
+				</ul>
+
+			</div>
+
+		</nav>
+
+
+	</header>
+	<main>
+		
+		<div class="container-fluid">
+			<div class="row">
+				<!-- O NAS -->
+				<div class="col-12 m-0 p-0">
+					<img id="top_bg" src="img/gorne_tlo1.jpg" alt="">
+				</div>
+				<div class="col-sm-12">
+					<h1>Co to jest CodeFly?</h1>
+				</div>
+				<div class="col-sm-12 col-md-6">
+					<div id ="kafelek1" class="">
+						<img src="img/o_nas_slider1.jpg">
+					</div>
+				</div>
+
+				<div class="col-sm-12 col-md-6" onclick="showContent(0)">
+					<div id ="kafelek2"  class="p-3">
+						<i class="icon-info-circled"></i>
+				 	</div>
+				 </div>
+
+				<div class="col-md-12 col-lg-8" onclick="showContent(1)">
+					<div id ="kafelek3" class="p-3 mt-3">
+						<div style="text-align: center;">
+							<i class="icon-users-outline"></i>
+							<p style="font-size: 44px; margin-left: 50px;">Kim jesteśmy?</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-12 col-lg-4">
+					<div id ="kafelek4" class="mt-3">
+						<img src="img/sprzet_slider1.jpg">
+					</div>
+					<h2><i class="icon-up-big" ></i>Z tym pracujemy<i class="icon-up-big" ></i></h2>
+				</div>
+
+				<div class="w-100"></div>
+
+				<!-- PROJEKTY -->
+				<div class="col-sm-12">
+					<h1>Aktualne projekty</h1>
+				</div>
+				<div class="col-sm-12 col-lg-6">
+
+					<div id="kafelek5" class="my-3 p-3" onclick="showContent(2)">
+						<img src="img/aktualne1.png" class="img-fluid">
+						<h2>Algorytmy?</h2>
+					</div>
+
+					<div id="kafelek6" class="my-3 p-3">
+						<div class="row">
+							<div class="col-sm-6"><h2>Pójść na browarka</h2></div>
+							<div class="w-100"></div>
+							<div class="col-sm-12 col-xl-6 mb-3">
+								<p>Morbi euismod non metus vel molestie. Nunc lacus tellus, pellentesque sed dui quis, congue suscipit turpis. Aenean nisi dui, consequat sit amet aliquet non, commodo ac lorem. Morbi porta lacus sit amet tellus imperdiet condimentum. Quisque ut ultricies nisi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis vel scelerisque massa. Pellentesque in ante ac nisi semper gravida. Donec mattis dapibus libero, vitae mattis eros auctor non. Curabitur dignissim sagittis leo, a dapibus augue interdum id. </p>
+							</div>
+							<div class="col-sm-12 col-xl-6">
+								<div class="mb-3"><img src="img/aktualne2.png"></div>
+								<div class="mt-3"><img src="img/aktualne2.png"></div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="col-md-12 col-lg-6">
+					<div  id="kafelek7" class="mt-3 p-3">
+						<div class="row">
+							
+							<div class="col-sm-12 p-3">
+								<h2 style="text-align: center;">Zaliczyć prologa</h2>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac finibus ante, at euismod tortor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Maecenas arcu massa, tristique sed congue a, tincidunt sit amet nisi. Etiam vel placerat arcu, ut suscipit erat. Duis cursus.Donec magna risus, dapibus eu sem et, interdum tristique metus. Pellentesque congue quam a ex egestas mattis. Sed venenatis orci nulla, quis sagittis libero aliquam sit amet. Nullam iaculis quam lacus, maximus tempor ligula sollicitudin tempus.</p>
+
+							</div>
+							<div class="col-md-6 p-3">
+								
+								<img src="img/aktualne3.jpg">
+
+							</div>
+							<div class="col-md-6 p-3">
+								
+								<img src="img/aktualne3.jpg">
+
+							</div>
+							<div class="col-sm-12 p-3">
+								
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce quis ante leo. Phasellus lacus ante, porta sagittis malesuada eu, pulvinar eu lacus. Maecenas mi eros, interdum sed dignissim at, dictum id risus.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac finibus ante, at euismod tortor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Maecenas arcu massa, tristique sed congue a, tincidunt sit amet nisi. Etiam vel placerat arcu, ut suscipit erat. Duis cursus.Donec magna risus, dapibus eu sem et, interdum tristique metus. Pellentesque congue quam a ex egestas mattis. Sed venenatis orci nulla, quis sagittis libero aliquam sit amet. Nullam iaculis quam lacus, maximus tempor ligula sollicitudin tempus.</p>
+
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+				<div class="col-sm-12">Sprawdź pozostałe projekty <a href="#"> tutaj!</a></div>
+
+				<div class="w-100"></div>
+
+				<!-- PEREŁKI -->
+				<div class="col-sm-12">
+					<h1>Nasze perełki</h1>
+				</div>
+				<div class="col-sm-12 col-lg-4">
+					<div class="kafelek8 p-3 my-3">
+						<div>
+							<img src="img/projekt1.jpg">
+						</div>
+						<div>
+							<h2>Retro konsola w nowym wydaniu</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas congue, turpis sit amet pharetra egestas, justo ipsum ullamcorper erat, eget iaculis ante sem sit amet nunc. Cras neque nunc, volutpat quis sodales sagittis, vestibulum ac nunc. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse maximus nibh id sapien tempor blandit. Proin commodo mattis convallis. Ut ligula orci, volutpat sit amet ornare sed, mollis pellentesque tellus. Donec rhoncus et ipsum non varius. Fusce vestibulum rutrum convallis. Mauris pharetra, ante nec congue aliquet, purus dolor ultricies augue, in fermentum sem diam ac turpis. In tempor, lacus in vulputate auctor, sem dui interdum ipsum, eget commodo sem justo ut nulla. Proin vitae dui velit. Donec magna risus, dapibus eu sem et, interdum tristique metus. Pellentesque congue quam a ex egestas mattis. Sed venenatis orci nulla, quis sagittis libero aliquam sit amet. Nullam iaculis quam lacus, maximus tempor ligula sollicitudin tempus.</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-sm-12 col-lg-4 ">
+					<div class="kafelek8 p-3 my-3">
+						<div>
+							<h2>Dom inteligentniejszy od studentów transportu</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam arcu odio, hendrerit non bibendum et, condimentum ac felis. Aenean pharetra, nisi non gravida pellentesque, felis purus vehicula erat, nec dictum felis justo a tortor. Nam porttitor, ligula tempor auctor imperdiet, eros lacus tempor erat, vitae euismod nisl risus et magna. Suspendisse potenti. Nulla eu sodales justo. Fusce venenatis neque lorem, ac pretium quam rutrum a. Ut vulputate, leo in hendrerit sagittis, risus arcu gravida eros, suscipit efficitur tellus sem a risus.Nam porttitor, ligula tempor auctor imperdiet, eros lacus tempor erat, vitae euismod nisl risus et magna. Suspendisse potenti. Nulla eu sodales justo. Fusce venenatis neque lorem, ac pretium quam rutrum a. Ut vulputate, leo in hendrerit sagittis, risus arcu gravida eros, suscipit efficitur tellus sem a risus.</p>
+						</div>
+						<div>
+							<img src="img/projekt2.jpg">
+						</div>
+					</div>
+				</div>
+
+				<div class="col-sm-12 col-lg-4">
+					<div class="kafelek8 p-3 my-3">
+						<div>
+							<img src="img/projekt3.jpg">
+						</div>
+						<div>
+							<h2>Wzmacniacz xD</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id ullamcorper orci, placerat vulputate enim. Duis dolor sem, ullamcorper a finibus id, tristique ut arcu. Etiam dictum libero non sapien rutrum placerat. Sed iaculis, orci eget fringilla ornare, velit enim mollis nisi, vitae ultrices lorem felis placerat turpis. Suspendisse eget commodo libero. Vestibulum elementum erat sit amet eros lacinia, ac sollicitudin libero semper. Etiam sit amet risus porta, ultricies metus eget, rhoncus augue. Phasellus aliquet vehicula ligula, et vestibulum justo egestas eget. Proin scelerisque, risus sed laoreet blandit, risus tellus lacinia lorem, nec vulputate magna eros sit amet augue. Maecenas faucibus enim vitae enim convallis fermentum. Proin sed velit nec quam congue efficitur eu sagittis est. Ut condimentum, ipsum sit amet aliquet pretium, libero sapien malesuada nibh, quis interdum nibh lectus sit amet dolor.</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- EVENTY -->
+				<div class="col-sm-12"><h1>Nadchodzące wydarzenia</h1></div>
+				<div  class="col-sm-3 col-md-2 offset-md-1 mt-3"><img src="img/data.jpg"></div>
+				<div class="col-sm-9 col-md-8">
+					<h2 style="text-align:left;">Lorem ipsum dolor sit amet</h2> 
+					<p class="event">Consectetur adipiscing elit. Integer magna enim, aliquam ac arcu in, pulvinar dignissim quam. Vivamus nec turpis condimentum, porta enim id, aliquet enim. Suspendisse consectetur interdum turpis quis sodales. Aliquam commodo lorem sed rhoncus tempus. Duis id odio posuere ex dictum ornare pellentesque nec enim. Nullam aliquam odio velit, sit amet pharetra nibh aliquet et. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lacus urna, auctor et varius eget, sagittis elementum erat. Duis pharetra tellus sapien, quis tempus sem interdum nec. Proin posuere imperdiet enim at placerat. Curabitur erat augue.<a href="#">Sprawdź jak idą przygotowania!</a></p>
+				</div>
+				<div class="w-100" style="height: 50px;"></div>
+				
+				<div class="col-sm-9 col-md-8 offset-md-1">
+					<h2 style="text-align: right;">Lorem ipsum dolor sit amet</h2> 
+					<p class="event">Consectetur adipiscing elit. Integer magna enim, aliquam ac arcu in, pulvinar dignissim quam. Vivamus nec turpis condimentum, porta enim id, aliquet enim. Suspendisse consectetur interdum turpis quis sodales. Aliquam commodo lorem sed rhoncus tempus. Duis id odio posuere ex dictum ornare pellentesque nec enim. Nullam aliquam odio velit, sit amet pharetra nibh aliquet et. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lacus urna, auctor et varius eget, sagittis elementum erat. Duis pharetra tellus sapien, quis tempus sem interdum nec. Proin posuere imperdiet enim at placerat. Curabitur erat augue.<a href="#">Sprawdź jak idą przygotowania!</a></p>
+				</div>
+				<div  class="col-sm-3 col-md-2 mt-3"><img src="img/data.jpg"></div>
+				<div class="w-100" style="height: 50px;"></div>
+
+				<div  class="col-sm-3 col-md-2 offset-md-1 mt-3"><img src="img/data.jpg"></div>
+				<div class="col-sm-9 col-md-8">
+					<h2 style="text-align: left;">Lorem ipsum dolor sit amet</h2> 
+					<p class="event">Consectetur adipiscing elit. Integer magna enim, aliquam ac arcu in, pulvinar dignissim quam. Vivamus nec turpis condimentum, porta enim id, aliquet enim. Suspendisse consectetur interdum turpis quis sodales. Aliquam commodo lorem sed rhoncus tempus. Duis id odio posuere ex dictum ornare pellentesque nec enim. Nullam aliquam odio velit, sit amet pharetra nibh aliquet et. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lacus urna, auctor et varius eget, sagittis elementum erat. Duis pharetra tellus sapien, quis tempus sem interdum nec. Proin posuere imperdiet enim at placerat. Curabitur erat augue.<a href="#">Sprawdź jak idą przygotowania!</a></p>
+				</div>
+				<div class="w-100" style="height: 50px;"></div>
+
+				</div>
+
+				<div class="w-100"></div>
+
+			</div>
+		</div>
+
+	</main>
+
+	<div class="socials">
+		
+		<div id="fb"><i class="icon-facebook" ></i></div>
+		<div id="in"><i class="icon-instagram" ></i></div>
+
+	</div>
+
+	<footer>
+		
+		<div class="stopka bg-dark">
+			Strona wykonana przez członków 
+			<span style="color: #030054">Code</span>Fly. Gniezno 2020 &copy; Wszystkie prawa zastrzeżone.
+		</div>
+
+	</footer>
+
+	<div id='welcomeScreen'>
+		
+		<div id="welcomeImg"><img  src="img/logo2.png" alt=""></div>
+
+	</div>
+
+
+	<script
+  	src="https://code.jquery.com/jquery-3.4.1.min.js"
+  	integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  	crossorigin="anonymous"></script>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	
+	<script src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="magic.js"></script>
+
+</body>
+</html>
+
+<!--
+	<div class="row">
+		<div class="col-sm-6 offset-6"><h2>Zdać algorytmy</h2></div>
+		<div class="col-sm-12 col-xl-6">
+			<div class="mb-3"><img src="img/aktualne1.png"></div>
+			<div class="mt-3"><img src="img/aktualne1.png"></div>
+		</div>
+		<div class="col-sm-12 col-xl-6">
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam efficitur orci at quam dictum tempus. Nulla tempus, augue non efficitur euismod, enim tellus egestas mi, et elementum lorem nisi at dui. Praesent laoreet felis sit amet sagittis porttitor. Praesent et nisl vitae felis sollicitudin imperdiet. Nam semper posuere euismod. Donec posuere maximus metus at scelerisque. In non lectus justo. Nulla consequat tincidunt magna, a dictum nisi dignissim vel.</p>
+		</div>
+	</div>
+-->

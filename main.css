@@ -1,0 +1,192 @@
+body
+{
+	font-size: 20px;
+	font-family: 'Open-Sans', 'semi-serif';
+	background-image: url('img/tlo2.png');
+	color: #efefef;
+	text-align: center;
+}
+h1
+{
+	letter-spacing: 2px;
+	line-height: 200%;
+	font-size: 48px;
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+h2
+{
+	margin: 20px 0px;
+	text-align: center;
+}
+nav img
+{
+	max-width: 60px;
+	max-height: 60px;
+}
+main img
+{
+	width: 100%;
+	max-height: 100%;
+	border-radius: 21px;
+}
+#top_bg
+{
+	border-radius: 0px;
+	margin: 0 !important;
+}
+#kafelek1
+{
+	border-radius: 25px;
+	border: 3px solid #d9c8b8;
+	width: 100%;
+	height: auto;
+
+}
+#kafelek2
+{
+	border-radius: 25px;
+	border: 2px dashed gray;
+	width: 100%;
+	height: auto;
+	text-align: justify;
+	opacity: 0.9;
+	background-color: #303030;
+
+}
+#kafelek2:hover
+{
+	opacity: 1;
+	cursor: pointer;
+}
+#kafelek3
+{
+	width: 100%;
+	height: auto;
+	border-radius: 25px;
+	border: 3px dashed #69ad03;
+	background-color: #69ad03;
+	text-align: justify;
+	opacity: 0.9;
+
+}
+#kafelek3:hover
+{
+	opacity: 1;
+	cursor: pointer;
+}
+#kafelek4
+{
+	width: 100%;
+	height: auto;
+	border-radius: 25px;
+	border: 3px solid #d9c8b8;
+	text-align: justify;
+}
+#kafelek5
+{
+	width: 100%;
+	height: auto;
+	min-height: 500px;
+	border-radius: 25px;
+	border: 3px dashed green;
+
+	text-align: justify;
+}
+#kafelek6
+{
+	width: 100%;
+	height: auto;
+	min-height: 500px;
+	border-radius: 25px;
+	border: 3px dashed red;
+	text-align: justify;
+
+
+}
+#kafelek7
+{
+	width: 100%;
+	height: auto;
+	min-height: 1080px;
+	border-radius: 25px;
+	border: 3px dashed yellow;
+	text-align: justify;
+}
+.kafelek8
+{
+	width: 100%;
+	height: auto;
+	min-height: 1100px;
+	border-radius: 25px;
+	border: 3px solid #81b51b;
+	text-align: justify;
+}
+.event
+{
+	text-align: justify;
+}
+.socials
+{
+	position: fixed;
+	top: 150px;
+	background-color: #343438;
+	width: 60px;
+	height: 115px;
+}
+#fb
+{
+	margin: 5px;
+	width: 50px;
+	height: 50px;
+}
+#fb:hover
+{
+	background-color: #4668b3;
+	cursor: pointer;
+}
+#in
+{
+	margin: 5px;
+	width: 50px;
+	height: 50px;
+}
+#in:hover
+{
+	background-color: #dd2a7b;
+	cursor: pointer;
+}
+ul > li
+{
+	font-size: 32px;
+}
+ul > li:hover
+{
+	background-color: #e3ddb8
+	color:#47463f;
+}
+.dropdown-item
+{
+	font-size: 24px;
+}
+.stopka
+{
+	color: #d6d0ab;
+}
+#welcomeScreen
+{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: #303030;
+	text-align: center;
+	padding-top: 100px;
+}
+#welcomeScreen img
+{
+	display: none;
+	width: 30%;
+	height: auto;
+}
