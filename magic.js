@@ -96,8 +96,9 @@ function showContent(nr)
 }
 function Start()
 {
-	$('#welcomeImg').fadeOut(1);
-	document.getElementById("welcomeImg").style.display = 'block';
-	//window.onscroll = function () { window.scrollTo(0, 0); };
+	
+	document.getElementById("wrapper").style.display = 'none';
+	document.getElementById("welcomeImg").innerHTML = '<img  src="img/logo2.png" alt="">';
+	
 	$('#welcomeImg').fadeIn(5000);
 }
