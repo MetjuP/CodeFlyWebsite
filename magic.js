@@ -102,4 +102,5 @@ function Start()
 	document.getElementById("welcomeImg").innerHTML = '<img  src="img/logo2.png" alt="">';
 	
 	$('#welcomeImg').fadeIn(5000);
+	document.getElementById("wrapper").style.display = 'block';
 }
