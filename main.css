@@ -87,6 +87,7 @@ main img
 {
 	width: 100%;
 	height: auto;
+	min-height: 530px;
 	border-radius: 25px;
 	border: 2px dashed green;
 
@@ -96,6 +97,7 @@ main img
 {
 	width: 100%;
 	height: auto;
+	min-height: 530px;
 	border-radius: 25px;
 	border: 2px dashed red;
 	text-align: justify;
@@ -142,6 +144,30 @@ main img
 {
 	text-align: justify;
 }
+#rozwin_event1
+{
+	font-size: 25px; 
+	color: #1670b5; 
+	margin-bottom: 15px;
+}
+#rozwin_event1:hover
+{
+	cursor: pointer;
+	color: #0560a4;
+}
+#zwin_event1
+{
+	font-size: 25px; 
+	color: #1670b5; 
+	text-align: center;
+	width: 100%;
+}
+#zwin_event1:hover
+{
+	cursor: pointer;
+	color: #0560a4;
+}
+
 .socials
 {
 	position: fixed;

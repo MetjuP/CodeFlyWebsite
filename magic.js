@@ -109,8 +109,24 @@ function hideWelcome()
 {
 	clearTimeout(timer1);
 	document.getElementById("wrapper").style.display = 'block';
+	for(i=1;i <= 1;i++)
+	{
+		$('#event' + i + '_roz').slideUp();
+	}
 	$("#welcomeScreen").slideUp(1500);
 	//enableScroll();
+}
+function eventSlideDown(nr,kafelek)
+{
+	$('#event' + nr+'_roz').slideDown();
+	document.getElementById('rozwin_event' +nr).innerHTML = '';
+	document.getElementById(kafelek).style.borderStyle = 'dashed';
+}
+function eventSlideUp(nr,kafelek)
+{
+	$('#event' + nr+'_roz').slideUp();
+	document.getElementById('rozwin_event' +nr).innerHTML = 'Sprawdź jak idą przygotowania!';
+	document.getElementById(kafelek).style.borderStyle = 'solid';
 }
 // function disableScroll() { 
 //     // Get the current page scroll position 
