@@ -35,6 +35,7 @@ tail[8] = 'kafelek';
 tail[9] = 'kafelek';
 
 let timer = 0;
+let timer1 = 0;
 let currentNumber = 0;
 let animation = 0;
 
@@ -96,9 +97,20 @@ function showContent(nr)
 }
 function Start()
 {
-	document.getElementById("welcomeImg").style.display = 'none';
+	
+	document.getElementById("wrapper").style.display = 'none';
+	$('#welcomeImg').fadeOut(1);
 	document.getElementById("welcomeImg").innerHTML = '<img  src="img/logo2.png" alt="">';
-
-	//window.onscroll = function () { window.scrollTo(0, 0); };
+	
 	$('#welcomeImg').fadeIn(3000);
+
+	timer1 = setTimeout('showPage()',4500);
+	console.log(timer1);
+}
+function showPage()
+{
+	console.log('weszło do funkcji')
+	clearTimeout(timer1);
+	document.getElementById("wrapper").style.display = 'block';
+	$("#welcomeScreen").fadeOut(2000);
 }
