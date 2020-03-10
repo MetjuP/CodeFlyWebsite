@@ -103,13 +103,13 @@ function showPage()
 	$("#welcomeScreen").animate(
 	{
 		left : '5px',
-		top: '5px'
+		top: '5px',
 		font-size: '195px'
 	},'slow');
-		$("#welcomeScreen").animate(
+	$("#welcomeScreen").animate(
 	{
 		left : '0px',
-		top: '0px'
+		top: '0px',
 		font-size: '200px'
 	},'slow');
 	$("#welcomeScreen").fadeOut(1500);
