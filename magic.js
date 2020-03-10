@@ -127,6 +127,8 @@ function eventSlideUp(nr,kafelek)
 	$('#event' + nr+'_roz').slideUp();
 	document.getElementById('rozwin_event' +nr).innerHTML = 'Sprawdź jak idą przygotowania!';
 	document.getElementById(kafelek).style.borderStyle = 'solid';
+
+	document.querySelector('#' + kafelek).scrollIntoView({behavior: 'smooth'});
 }
 // function disableScroll() { 
 //     // Get the current page scroll position 
