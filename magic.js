@@ -90,28 +90,22 @@ function Start()
 	$('#welcomeImg').fadeOut(1);
 	document.getElementById("welcomeImg").innerHTML = '<img  src="img/logo2.png" alt="">';
 	
-	$('#welcomeImg').fadeIn(3000);
+	$('#welcomeImg').fadeIn(2000);
 
-	timer1 = setTimeout('showPage()',4500);
-	console.log(timer1);
+	timer1 = setTimeout('showWelcome()',3000);
 }
-function showPage()
+function showWelcome()
 {
 	console.log('weszło do funkcji')
 	clearTimeout(timer1);
+	$("#welcomeImg").animate({margin: '7px'},'fast');
+	$("#welcomeImg").animate({margin: '0px'},'fast');
+	timer1 = setTimeout('hideWelcome()', 300);
+}
+function hideWelcome()
+{
+	clearTimeout(timer1);
 	document.getElementById("wrapper").style.display = 'block';
-	$("#welcomeScreen").animate(
-	{
-		left : '5px',
-		top: '5px',
-		font-size: '195px'
-	},'slow');
-	$("#welcomeScreen").animate(
-	{
-		left : '0px',
-		top: '0px',
-		font-size: '200px'
-	},'slow');
-	$("#welcomeScreen").fadeOut(1500);
+	$("#welcomeScreen").slideUp(1500);
 }
 
