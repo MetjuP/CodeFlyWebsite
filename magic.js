@@ -115,6 +115,7 @@ function hideWelcome()
 	}
 	$("#welcomeScreen").slideUp(1500);
 	//enableScroll();
+	changeSlide();
 }
 function eventSlideDown(nr)
 {
@@ -132,27 +133,27 @@ function eventSlideUp(nr)
 }
 
 /*******************   SLIDER  *******************/
-var numb = Math.floor(Math.random()*5)+1
+var numb = Math.floor(Math.random()*3)+1
 
 var timerS1 = 0;
 var timerS2 = 0;
 var timerS3 = 0;
-function hide()
+function hideSlide()
 {
-	$("#o_nas_slajder").fadeOut(500);
+	$("#kafelek1").fadeOut(500);
 }
 function changeSlide()
 {
 	clearTimeout(timerS3);
-	numb++; if(numb >5) numb = 1;
+	numb++; if(numb >3) numb = 1;
 	
-	var plik ="<img src=\"img/slajdy/o_nas_slajder" + numb +".jpg\"/>";
+	var plik ="<img src=\"img/slajdy/o_nas_slider" + numb +".jpg\"/>";
 	
-	document.getElementById("o_nas_slajder").innerHTML = plik;
-	$("#o_nas_slajder").fadeIn(500);
+	document.getElementById("kafelek1").innerHTML = plik;
+	$("#kafelek1").fadeIn(500);
 	
 	timerS1 = setTimeout("changeSlide()",5000);
-	timerS2 = setTimeout("hide()",4500);
+	timerS2 = setTimeout("hideSlide()",4500);
 
 }
 function setSlide(nr)
@@ -161,7 +162,7 @@ function setSlide(nr)
 	clearTimeout(timerS2);
 
 	numb = nr-1;
-	hide();
+	hideSlide();
 	timerS3 = setTimeout("changeSlide()",500);
 
 }
