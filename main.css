@@ -46,7 +46,7 @@ main img
 #kafelek2
 {
 	border-radius: 25px;
-	border: 2px dashed gray;
+	border: 2px solid gray;
 	width: 100%;
 	height: auto;
 	text-align: justify;
@@ -64,8 +64,8 @@ main img
 	width: 100%;
 	height: auto;
 	border-radius: 25px;
-	border: 3px dashed #69ad03;
-	background-color: #69ad03;
+	border: 2px solid #2781c6;
+	background-color: #1670b5;
 	text-align: justify;
 	opacity: 0.9;
 
@@ -80,16 +80,15 @@ main img
 	width: 100%;
 	height: auto;
 	border-radius: 25px;
-	border: 3px solid #d9c8b8;
+	border: 2px solid #d9c8b8;
 	text-align: justify;
 }
 #kafelek5
 {
 	width: 100%;
 	height: auto;
-	min-height: 500px;
 	border-radius: 25px;
-	border: 3px dashed green;
+	border: 2px dashed green;
 
 	text-align: justify;
 }
@@ -97,9 +96,8 @@ main img
 {
 	width: 100%;
 	height: auto;
-	min-height: 500px;
 	border-radius: 25px;
-	border: 3px dashed red;
+	border: 2px dashed red;
 	text-align: justify;
 
 
@@ -110,7 +108,7 @@ main img
 	height: auto;
 	min-height: 1080px;
 	border-radius: 25px;
-	border: 3px dashed yellow;
+	border: 2px dashed yellow;
 	text-align: justify;
 }
 .kafelek8
@@ -119,7 +117,25 @@ main img
 	height: auto;
 	min-height: 1100px;
 	border-radius: 25px;
-	border: 3px solid #81b51b;
+	border: 2px solid #81b51b;
+	text-align: justify;
+}
+.kafelek9
+{
+	width: 100%;
+	height: auto;
+	min-height: 300px;
+	border-radius: 25px;
+	border: 2px solid #1670b5;
+	text-align: justify;
+}
+.kafelek10
+{
+	width: 100%;
+	height: auto;
+	min-height: 300px;
+	border-radius: 25px;
+	border: 2px solid grey;
 	text-align: justify;
 }
 .event
