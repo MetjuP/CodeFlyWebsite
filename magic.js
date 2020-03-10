@@ -74,26 +74,14 @@ function changeContent()
 }
 function showContent(nr)
 {
-	if(animation == 99)
-	{
-		animation = Math.floor(Math.random() * 2);
-	}
-	else
-	{
-		animation++;
-	}
+	if(animation == 99)	animation = Math.floor(Math.random() * 2);
+	else	animation++;
 
-	if (animation >=2) 
-	{
-		animation = Math.floor(Math.random() * 2);
-	}
+	if (animation >=2) 	animation = Math.floor(Math.random() * 2);
 
 	currentNumber = nr;
 
-	if(clicked[currentNumber] == false)
-	{
-		hide();
-	}
+	if(clicked[currentNumber] == false)	hide();
 }
 function Start()
 {
@@ -112,5 +100,12 @@ function showPage()
 	console.log('weszło do funkcji')
 	clearTimeout(timer1);
 	document.getElementById("wrapper").style.display = 'block';
-	$("#welcomeScreen").fadeOut(2000);
+	$("#welcomeScreen").animate(
+	{
+		margin-left : '5px',
+		margin-top: '5px'
+		font-size: '195px'
+	});
+	$("#welcomeScreen").fadeOut(1500);
 }
+
