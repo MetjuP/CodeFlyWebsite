@@ -144,6 +144,7 @@ main img
 {
 	text-align: justify;
 }
+/* EVENT 1 */
 #rozwin_event1
 {
 	font-size: 25px; 
@@ -168,6 +169,56 @@ main img
 	color: #0560a4;
 }
 
+/* EVENT 2 */
+#rozwin_event2
+{
+	font-size: 25px; 
+	color: grey; 
+	margin-bottom: 15px;
+}
+#rozwin_event2:hover
+{
+	cursor: pointer;
+	color: darkgrey;
+}
+#zwin_event2
+{
+	font-size: 25px; 
+	color: grey; 
+	text-align: center;
+	width: 100%;
+}
+#zwin_event2:hover
+{
+	cursor: pointer;
+	color: darkgrey;
+}
+
+/* EVENT 3 */
+#rozwin_event3
+{
+	font-size: 25px; 
+	color: #1670b5; 
+	margin-bottom: 15px;
+}
+#rozwin_event3:hover
+{
+	cursor: pointer;
+	color: #0560a4;
+}
+#zwin_event3
+{
+	font-size: 25px; 
+	color: #1670b5; 
+	text-align: center;
+	width: 100%;
+}
+#zwin_event3:hover
+{
+	cursor: pointer;
+	color: #0560a4;
+}
+/* PASEK SOCIAL MEDIÓW */
 .socials
 {
 	position: fixed;
@@ -200,6 +251,7 @@ main img
 	background-color: #dd2a7b;
 	cursor: pointer;
 }
+/* LISTA */
 ul > li
 {
 	font-size: 32px;
@@ -217,6 +269,7 @@ ul > li:hover
 {
 	color: #d6d0ab;
 }
+/* EKRAN STARTOWY */
 #welcomeScreen
 {
 	position: absolute;
