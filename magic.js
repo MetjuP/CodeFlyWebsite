@@ -130,18 +130,38 @@ function eventSlideUp(nr)
 
 	document.querySelector('#event' + nr).scrollIntoView({behavior: 'smooth'});
 }
-// function disableScroll() { 
-//     // Get the current page scroll position 
-//     let scrollTop = window.pageYOffset || document.documentElement.scrollTop; 
-//     let scrollLeft = window.pageXOffset || document.documentElement.scrollLeft, 
-  
-//         // if any scroll is attempted, set this to the previous value 
-//         window.onscroll = function() {  // tutej nie działa
-//             window.scrollTo(scrollLeft, scrollTop); 
-//         }; 
-// } 
-  
-// function enableScroll() { 
-//     window.onscroll = function() {}; 
-// } 
 
+/*******************   SLIDER  *******************/
+var numb = Math.floor(Math.random()*5)+1
+
+var timerS1 = 0;
+var timerS2 = 0;
+var timerS3 = 0;
+function hide()
+{
+	$("#o_nas_slajder").fadeOut(500);
+}
+function changeSlide()
+{
+	clearTimeout(timerS3);
+	numb++; if(numb >5) numb = 1;
+	
+	var plik ="<img src=\"img/slajdy/o_nas_slajder" + numb +".jpg\"/>";
+	
+	document.getElementById("o_nas_slajder").innerHTML = plik;
+	$("#o_nas_slajder").fadeIn(500);
+	
+	timerS1 = setTimeout("changeSlide()",5000);
+	timerS2 = setTimeout("hide()",4500);
+
+}
+function setSlide(nr)
+{
+	clearTimeout(timerS1);
+	clearTimeout(timerS2);
+
+	numb = nr-1;
+	hide();
+	timerS3 = setTimeout("changeSlide()",500);
+
+}
