@@ -85,7 +85,7 @@ function showContent(nr)
 }
 function Start()
 {
-	
+	disableScroll();
 	document.getElementById("wrapper").style.display = 'none';
 	$('#welcomeImg').fadeOut(1);
 	document.getElementById("welcomeImg").innerHTML = '<img  src="img/logo2.png" alt="">';
@@ -107,5 +107,20 @@ function hideWelcome()
 	clearTimeout(timer1);
 	document.getElementById("wrapper").style.display = 'block';
 	$("#welcomeScreen").slideUp(1500);
+	enableScroll();
 }
+function disableScroll() { 
+    // Get the current page scroll position 
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop; 
+    let scrollLeft = window.pageXOffset || document.documentElement.scrollLeft, 
+  
+        // if any scroll is attempted, set this to the previous value 
+        window.onscroll = function() { 
+            window.scrollTo(scrollLeft, scrollTop); 
+        }; 
+} 
+  
+function enableScroll() { 
+    window.onscroll = function() {}; 
+} 
 
