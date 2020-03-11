@@ -286,3 +286,7 @@ ul > li:hover
 	width: 30%;
 	height: auto;
 }
+#welcomeSound
+{
+	display: none;
+}
