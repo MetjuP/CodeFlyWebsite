@@ -38,6 +38,7 @@ let timer = 0;
 let timer1 = 0;
 let currentNumber = 0;
 let animation = 99;
+var click = new Audio("click1.wav");
 
 function hide()
 {
@@ -101,6 +102,7 @@ function showWelcome()
 {
 	console.log('weszło do funkcji')
 	clearTimeout(timer1);
+	click.play();
 	$("#welcomeImg").animate({margin: '7px'},'fast');
 	$("#welcomeImg").animate({margin: '0px'},'fast');
 	timer1 = setTimeout('hideWelcome()', 300);
