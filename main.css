@@ -64,8 +64,8 @@ main img
 	width: 100%;
 	height: auto;
 	border-radius: 25px;
-	border: 2px solid #2781c6;
-	background-color: #1670b5;
+	border: 2px solid #1670b5;
+	background-color: #2781c6;
 	text-align: justify;
 	opacity: 0.9;
 
@@ -97,7 +97,6 @@ main img
 {
 	width: 100%;
 	height: auto;
-	min-height: 530px;
 	border-radius: 25px;
 	border: 2px dashed red;
 	text-align: justify;
