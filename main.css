@@ -21,8 +21,8 @@ h2
 }
 nav img
 {
-	max-width: 60px;
-	max-height: 60px;
+	max-width: 100px;
+	max-height: 100px;
 }
 main img
 {
@@ -48,7 +48,6 @@ main img
 	border-radius: 25px;
 	border: 2px solid gray;
 	width: 100%;
-	height: auto;
 	text-align: justify;
 	opacity: 0.9;
 	background-color: #303030;
@@ -62,7 +61,6 @@ main img
 #kafelek3
 {
 	width: 100%;
-	height: auto;
 	border-radius: 25px;
 	border: 2px solid #1670b5;
 	background-color: #2781c6;
@@ -87,18 +85,16 @@ main img
 {
 	width: 100%;
 	height: auto;
-	min-height: 530px;
 	border-radius: 25px;
-	border: 2px dashed green;
+	border: 2px dashed #1670b5;
 
 	text-align: justify;
 }
 #kafelek6
 {
 	width: 100%;
-	height: auto;
 	border-radius: 25px;
-	border: 2px dashed red;
+	border: 2px dashed #1670b5;
 	text-align: justify;
 
 
@@ -107,10 +103,10 @@ main img
 {
 	width: 100%;
 	height: auto;
-	min-height: 1080px;
 	border-radius: 25px;
-	border: 2px dashed yellow;
+	border: 2px dashed #d9c8b8;
 	text-align: justify;
+
 }
 .kafelek8
 {
@@ -225,6 +221,7 @@ main img
 	background-color: #343438;
 	width: 60px;
 	height: 115px;
+	border-radius: 5px;
 }
 #fb
 {

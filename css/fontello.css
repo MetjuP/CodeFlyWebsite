@@ -55,9 +55,9 @@
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
  
-.icon-info-circled:before { content: '\e800'; color: white; font-size: 200px; margin-left: 240px; margin-top: 80px; margin-bottom: 120px;} /* '' */
+.icon-info-circled:before { content: '\e800'; color: white; font-size: 200px; margin: 75px 0;} /* '' */
 .icon-cog:before { content: '\e801'; color: white; font-size: 68px;} /* '' */
-.icon-users-outline:before { content: '\e802';  font-size: 200px; margin-top: 50px; margin-bottom: 90px;} /* '' */
+.icon-users-outline:before { content: '\e802';  font-size: 200px; margin-top: 50px; margin-bottom: 80px;} /* '' */
 .icon-location-outline:before { content: '\e803'; } /* '' */
 .icon-up-big:before { content: '\e804'; } /* '' */
 .icon-facebook:before { content: '\f09a'; margin-top: 8px; font-size: 32px; } /* '' */

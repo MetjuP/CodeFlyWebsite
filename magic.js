@@ -13,8 +13,8 @@ clicked[8]=false;
 clicked[9]=false;
 const content = new Array(10);
 content[0] = "<h2>Coś o kole</h2><br/><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac consectetur libero, non efficitur risus. Suspendisse vestibulum, lacus eu efficitur porta, mi ipsum cursus eros, ac blandit ante ex molestie nisl. Duis ac egestas est. Cras id sapien vel orci suscipit placerat. Pellentesque convallis, arcu at dictum blandit, lectus tortor lacinia nisl, quis luctus urna sem ultricies risus. Aenean a augue lectus. Mauris accumsan, dui at rhoncus convallis, lorem elit convallis velit, vitae tristique sapien erat elementum sem. Ut sed tempor tellus. Nullam quis convallis nibh, quis iaculis purus.</p>";
-content[1] = '<h2>Kim jesteśmy?</h2><br/><p>Mauris vehicula molestie magna vehicula convallis. Vestibulum sed ipsum sed velit ornare mattis ut eget nisi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus est justo, malesuada eget tempus vel, ultrices non quam. Proin vestibulum viverra nisi nec tempor. Morbi ullamcorper mauris eu nulla eleifend condimentum. Donec condimentum a quam in efficitur. Mauris ut sapien aliquet, molestie eros a, mattis ante. Vestibulum vitae consequat augue. Donec mollis vehicula est sed mattis.Mauris ut sapien aliquet, molestie eros a, mattis ante. Vestibulum vitae consequat augue. Donec mollis vehicula est sed mattis.<br/><br/>Sed urna urna, pulvinar id egestas vel, ornare ut ante. Aliquam finibus augue ut mauris facilisis venenatis. Phasellus efficitur laoreet sagittis. Sed sollicitudin est ut dui dictum, eget tempus arcu placerat.  </p>';
-content[2] = '<div class="row"><div class="col-sm-6"><h2>Pójść na browarka</h2></div><div class="w-100"></div><div class="col-sm-12 col-xl-6 mb-3"><p>Morbi euismod non metus vel molestie. Nunc lacus tellus, pellentesque sed dui quis, congue suscipit turpis. Aenean nisi dui, consequat sit amet aliquet non, commodo ac lorem. Morbi porta lacus sit amet tellus imperdiet condimentum. Quisque ut ultricies nisi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis vel scelerisque massa. Pellentesque in ante ac nisi semper gravida. Donec mattis dapibus libero, vitae mattis eros auctor non. Curabitur dignissim sagittis leo, a dapibus augue interdum id. </p></div><div class="col-sm-12 col-xl-6"><div class="mb-3"><img src="img/aktualne2.png"></div><div class="mt-3"><img src="img/aktualne2.png"></div></div></div>';
+content[1] = '<div class="row"><div class="col-12"><h2>Kim jesteśmy?</h2><br/><p>W skrócie, grupka studentów którzy mają nadzieje osiągnąc coś więcej niż zaliczenie z prologa. W trochę mniejszym sktócie, drugą generacją koła naukowego uczelni PWSZ w gnieźnie - CodeFly. Małym zgrupowaniem nieco bardziej ambitnych niż normalnie studentów celujących w doskonalenie samych siebie i nabywanie nowych umiejętności. No i zaliczenie prologa.<br/><br/></p></div><div class="col-lg-4 offset-1 pt-4"><p>Chcesz dołączyć? Zraszamy! <br/>Nie chcesz? <br/>Odwiedź nas, może zmienisz zdanie!<br/>Nadal nie zainteresowany? Szkoda... <br/>Wielka, wielka szkoda...</p></div><div class="col-lg-4 offset-1"><img style="width: 100%; height: auto;" src="img/shame.gif" alt=""></div></div>';
+content[2] = '<div class="row"><div class="col-sm-6"><h2>Pójść na browarka</h2></div><div class="w-100"></div><div class="col-sm-12 col-xl-6 mb-3"><p>Morbi euismod non metus vel molestie. Nunc lacus tellus, pellentesque sed dui quis, congue suscipit turpis. Aenean nisi dui, consequat sit amet aliquet non, commodo ac lorem. Morbi porta lacus sit amet tellus imperdiet condimentum. Quisque ut ultricies nisi.</p></div><div class="col-sm-12 col-xl-6"><div class="mb-3"><img src="img/aktualne2.png"></div></div></div>';
 content[3] = '';
 content[4] = '';
 content[5] = '';
@@ -37,10 +37,11 @@ tail[9] = 'kafelek';
 let timer = 0;
 let timer1 = 0;
 let currentNumber = 0;
+let currentHeight = 0; 
 let animation = 99;
 let audioClick = new Audio('click1.wav');
 
-function hide()
+function hide() // ZANIKANIE KAFELKÓW
 {
 	console.log(animation);
 	if(animation == 0)
@@ -55,8 +56,18 @@ function hide()
 		$('#' + tail[currentNumber]).slideUp();
 		timer = setTimeout('changeContent()',300);
 	}
+	else if(animation==2)
+	{
+		currentHeight = document.getElementById(tail[currentNumber]).offsetHeight;
+		$('#' + tail[currentNumber]).animate(
+			{width: '30px',
+			height: '' + currentHeight + 'px'
+			});
+		timer = setTimeout('changeContent()',300);
+		document.getElementById(tail[currentNumber]).innerHTML = '';
+	}
 }
-function changeContent()
+function changeContent() // PODMIANA ZAWRTOSCI KAFELKA + WYŁANIANIE
 {
 	clearTimeout(timer);
 
@@ -67,37 +78,50 @@ function changeContent()
 
 	if(animation==0)
 	{
-		$('#' + tail[currentNumber]).fadeIn(500);		
+		$('#' + tail[currentNumber]).fadeIn();		
 	}
 	else if (animation==1)
 	{	
 		$('#' + tail[currentNumber]).slideDown();
 	}
-
-	
+	else if(animation==2)
+	{
+		document.getElementById(tail[currentNumber]).style.maxHeight = "" + currentHeight + "px";
+		$('#' + tail[currentNumber]).animate(
+			{width: '100%',
+			});
+		timer = setTimeout('setAutoHeight(tail[currentNumber])', 500);
+	}	
 }
-function showContent(nr)
+function setAutoHeight(tail)
+{
+	console.log('maxHeight 100%')
+	document.getElementById(tail).style.maxHeight = 'none';
+	document.getElementById(tail).style.height = 'auto';
+}
+function showContent(nr) //KLIKNIECIE NA KAFELEK
 {
 	if(animation == 99)	animation = Math.floor(Math.random() * 2);
 	else	animation++;
 
-	if (animation >=2) 	animation = Math.floor(Math.random() * 2);
+	if (animation >=3) 	animation = Math.floor(Math.random() * 2);
 
 	currentNumber = nr;
-
+	//animation =2;    ////////////////////////// Ustalanie na sztywno animacji
 	if(clicked[currentNumber] == false)	hide();
 }
+/*********** ON LOAD **************/
 function Start()
 {
-	//disableScroll();
 	document.getElementById("wrapper").style.display = 'none';
 	$('#welcomeImg').fadeOut(1);
-	document.getElementById("welcomeImg").innerHTML = '<img  src="img/logo2.png" alt="">';
-	
+	document.getElementById("welcomeImg").innerHTML = '<img  src="img/codefly/CodeFly_FlyOnly_Outline_White.png" alt="">';
 	$('#welcomeImg').fadeIn(2000);
+	document.getElementById('top').scrollIntoView({behavior: 'smooth'});
 
 	timer1 = setTimeout('showWelcome()',3000);
 }
+/********** WELCOME SCREEEN *************/
 function showWelcome()
 {
 	audioClick.play();
@@ -115,12 +139,12 @@ function hideWelcome()
 		$('#event' + i + '_roz').slideUp();
 	}
 	$("#welcomeScreen").slideUp(1500);
-	//enableScroll();
 	changeSlide();
 }
+/*********** EVENT SLIDER ***************/
 function eventSlideDown(nr)
 {
-	$('#event' + nr+'_roz').slideDown();
+	$('#event' + nr+'_roz').slideDown('slow');
 	document.getElementById('rozwin_event' +nr).innerHTML = '';
 	document.getElementById('event' + nr).style.borderStyle = 'dashed';
 }
@@ -157,13 +181,11 @@ function changeSlide()
 	timerS2 = setTimeout("hideSlide()",4500);
 
 }
-function setSlide(nr)
+function setSlide()
 {
 	clearTimeout(timerS1);
 	clearTimeout(timerS2);
-
-	numb = nr-1;
 	hideSlide();
-	timerS3 = setTimeout("changeSlide()",500);
+	timer3 = setTimeout('changeSlide()',500);
 
 }
