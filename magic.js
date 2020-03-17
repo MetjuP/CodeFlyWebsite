@@ -12,9 +12,9 @@ clicked[7]=false;
 clicked[8]=false;
 clicked[9]=false;
 const content = new Array(10);
-content[0] = "<h2>Coś o kole</h2><br/><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac consectetur libero, non efficitur risus. Suspendisse vestibulum, lacus eu efficitur porta, mi ipsum cursus eros, ac blandit ante ex molestie nisl. Duis ac egestas est. Cras id sapien vel orci suscipit placerat. Pellentesque convallis, arcu at dictum blandit, lectus tortor lacinia nisl, quis luctus urna sem ultricies risus. Aenean a augue lectus. Mauris accumsan, dui at rhoncus convallis, lorem elit convallis velit, vitae tristique sapien erat elementum sem. Ut sed tempor tellus. Nullam quis convallis nibh, quis iaculis purus.</p>";
-content[1] = '<div class="row"><div class="col-12"><h2>Kim jesteśmy?</h2><br/><p>W skrócie, grupka studentów którzy mają nadzieje osiągnąc coś więcej niż zaliczenie z prologa. W trochę mniejszym sktócie, drugą generacją koła naukowego uczelni PWSZ w gnieźnie - CodeFly. Małym zgrupowaniem nieco bardziej ambitnych niż normalnie studentów celujących w doskonalenie samych siebie i nabywanie nowych umiejętności. No i zaliczenie prologa.<br/><br/></p></div><div class="col-lg-4 offset-1 pt-4"><p>Chcesz dołączyć? Zraszamy! <br/>Nie chcesz? <br/>Odwiedź nas, może zmienisz zdanie!<br/>Nadal nie zainteresowany? Szkoda... <br/>Wielka, wielka szkoda...</p></div><div class="col-lg-4 offset-1"><img style="width: 100%; height: auto;" src="img/shame.gif" alt=""></div></div>';
-content[2] = '<div class="row"><div class="col-sm-6"><h2>Pójść na browarka</h2></div><div class="w-100"></div><div class="col-sm-12 col-xl-6 mb-3"><p>Morbi euismod non metus vel molestie. Nunc lacus tellus, pellentesque sed dui quis, congue suscipit turpis. Aenean nisi dui, consequat sit amet aliquet non, commodo ac lorem. Morbi porta lacus sit amet tellus imperdiet condimentum. Quisque ut ultricies nisi.</p></div><div class="col-sm-12 col-xl-6"><div class="mb-3"><img src="img/aktualne2.png"></div></div></div>';
+content[0] = "<h2>Coś o kole</h2><br/><p>Koło naukowe Państwowej Wyższej Szkoły Zawodowej W Gnieźnie. Niewielka, lecz zintegrowana organizacja operująca w sferze informatycznej od lat... No może nie do końca. CodeFly upadał i powracał kilkukrotnie, jednak tym razem powracamy niczym Fenix z popiołów! Albo mucha która uciekła przed laczkiem...<br/><br/>Nowy zarząd, nowe twarze i nowe pomysły. W skrócie, nowa generacja CodeFly!</p>";
+content[1] = '<div class="row"><div class="col-12"><h2>Kim jesteśmy?</h2><br/><p>W skrócie, grupka studentów którzy mają nadzieje osiągnąc coś więcej niż zaliczenie z prologa. W trochę mniejszym sktócie, drugą generacją koła naukowego uczelni PWSZ w gnieźnie - CodeFly. Zbieraniną nieco bardziej ambitnych studentów celujących w doskonalenie samych siebie i nabywanie nowych umiejętności. No i zaliczenie prologa.<br/><br/>Pod przewodnictwem Profesora M. Leszka i z lekką atmosferą wokół nas mamy zamiar zaprezentować się światu pracując nad rozmaitymi projektami, klepiąc kod w Pythonie i paląc bramki NAND na zajęciach. A to wszystko w celu promowania uczelni i samego koła. Niech żyje zbrodniczy reżim!</p></div>';
+content[2] = '<div class="row"><div class="col-sm-12 col-xl-6 mb-3"><p><h2>Miejsce na twój projekt!</h2>Jesteś studentem naczej uczelni? Masz ciekawy pomysł? Świetnie! przyjdź na nasze spotkanie lub skontaktuj się z nami mailowo i zrealizuj swoje marzenia :)</p></div><div class="col-sm-12 col-xl-6"><div class="mb-3"><img src="img/aktualne2.jpg"></div></div></div>';
 content[3] = '';
 content[4] = '';
 content[5] = '';
@@ -101,10 +101,10 @@ function setAutoHeight(tail)
 }
 function showContent(nr) //KLIKNIECIE NA KAFELEK
 {
-	if(animation == 99)	animation = Math.floor(Math.random() * 2);
+	if(animation == 99)	animation = Math.floor(Math.random() * 1) +1;
 	else	animation++;
 
-	if (animation >=3) 	animation = Math.floor(Math.random() * 2);
+	if (animation >=3) 	animation = Math.floor(Math.random() * 1) +1;
 
 	currentNumber = nr;
 	//animation =2;    ////////////////////////// Ustalanie na sztywno animacji

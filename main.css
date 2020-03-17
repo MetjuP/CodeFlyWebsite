@@ -6,6 +6,11 @@ body
 	color: #efefef;
 	text-align: center;
 }
+body img
+{
+	width: 100%;
+	height: auto;
+}
 h1
 {
 	letter-spacing: 2px;
@@ -21,8 +26,8 @@ h2
 }
 nav img
 {
-	max-width: 100px;
-	max-height: 100px;
+	max-width: 60px;
+	max-height: 60px;
 }
 main img
 {
@@ -40,7 +45,7 @@ main img
 	border-radius: 25px;
 	border: 3px solid #d9c8b8;
 	width: 100%;
-	height: 400px;
+	height: auto;
 
 }
 #kafelek2
@@ -94,7 +99,8 @@ main img
 {
 	width: 100%;
 	border-radius: 25px;
-	border: 2px dashed #1670b5;
+	border: 2px solid #1670b5;
+	background-color: #2781c6;
 	text-align: justify;
 
 
@@ -134,6 +140,13 @@ main img
 	border-radius: 25px;
 	border: 2px solid grey;
 	text-align: justify;
+}
+#kontakt
+{
+	background-color: #e0e0e0;
+	text-align: center;
+	color: #343438;
+	border-radius: 25px 25px 0 0;
 }
 .event
 {
@@ -217,11 +230,11 @@ main img
 .socials
 {
 	position: fixed;
-	top: 150px;
+	top: 102px;
 	background-color: #343438;
 	width: 60px;
 	height: 115px;
-	border-radius: 5px;
+	border-radius: 0 5px 5px 0;
 }
 #fb
 {
