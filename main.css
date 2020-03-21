@@ -92,14 +92,47 @@ main img
 }
 #projekty img
 {
-	border-radius: 5px;
+	border-radius: 0;
+}
+#proj-content
+{
+	border: 2px solid #303030;
+	border-left-width: 0px;
+	height: 100%;
 }
 #proj_1
 {
 	opacity: 0.7;
+	border: 2px solid #303030;
+	border-bottom-width: 0;
 }
 #proj_1:hover
 {
+	border-right-width: 0;
+	opacity: 1;
+	cursor: pointer;
+}
+
+#proj_2
+{
+	opacity: 0.7;
+	border: 2px solid #303030;
+	border-bottom-width: 0;
+}
+#proj_2:hover
+{
+	border-right-width: 0;
+	opacity: 1;
+	cursor: pointer;
+}
+#proj_3
+{
+	opacity: 0.7;
+	border: 2px solid #d9c8b8;
+}
+#proj_3:hover
+{
+	border-right-width: 0;
 	opacity: 1;
 	cursor: pointer;
 }

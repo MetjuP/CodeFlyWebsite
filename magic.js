@@ -1,4 +1,4 @@
-//window.onload=Start;
+window.onload=Start;
 
 const clicked = new Array(10);
 clicked[0]=false;
@@ -74,7 +74,6 @@ function changeContent() // PODMIANA ZAWRTOSCI KAFELKA + WYŁANIANIE
 	document.getElementById(tail[currentNumber]).innerHTML = content[currentNumber];
 	document.getElementById(tail[currentNumber]).style.backgroundColor = "transparent";
 	document.getElementById(tail[currentNumber]).style.borderStyle = 'dashed';
-	clicked[currentNumber] = true;
 
 	if(animation==0)
 	{
@@ -101,14 +100,18 @@ function setAutoHeight(tail)
 }
 function showContent(nr) //KLIKNIECIE NA KAFELEK
 {
-	if(animation == 99)	animation = Math.floor(Math.random() * 1) +1;
-	else	animation++;
-
-	if (animation >=3) 	animation = Math.floor(Math.random() * 1) +1;
-
 	currentNumber = nr;
-	//animation =2;    ////////////////////////// Ustalanie na sztywno animacji
-	if(clicked[currentNumber] == false)	hide();
+	if(clicked[currentNumber] == false)	
+	{
+		clicked[currentNumber] = true;
+
+		if(animation == 99)	animation = Math.floor(Math.random() * 1) +1;
+		else	animation++;
+
+		if (animation >=3) 	animation = Math.floor(Math.random() * 1) +1;
+		
+		hide();
+	}
 }
 /*********** ON LOAD **************/
 function Start()
@@ -139,6 +142,7 @@ function hideWelcome()
 	}
 	$("#welcomeScreen").slideUp(1500);
 	changeSlide();
+	changeProject();
 }
 /*********** EVENT SLIDER ***************/
 function eventSlideDown(nr)
@@ -157,11 +161,11 @@ function eventSlideUp(nr)
 }
 
 /*******************   SLIDER  *******************/
-var numb = Math.floor(Math.random()*3)+1
+let numb = Math.floor(Math.random()*3)+1
 
-var timerS1 = 0;
-var timerS2 = 0;
-var timerS3 = 0;
+let timerS1 = 0;
+let timerS2 = 0;
+let timerS3 = 0;
 function hideSlide()
 {
 	$("#kafelek1").fadeOut(500);
@@ -171,7 +175,7 @@ function changeSlide()
 	clearTimeout(timerS3);
 	numb++; if(numb >3) numb = 1;
 	
-	var plik ="<img src=\"img/slajdy/o_nas_slider" + numb +".jpg\"/>";
+	let plik ="<img src=\"img/slajdy/o_nas_slider" + numb +".jpg\"/>";
 	
 	document.getElementById("kafelek1").innerHTML = plik;
 	$("#kafelek1").fadeIn(500);
@@ -186,5 +190,40 @@ function setSlide()
 	clearTimeout(timerS2);
 	hideSlide();
 	timer3 = setTimeout('changeSlide()',500);
+
+}
+
+
+/*******************   PROJEKTY  *******************/
+const project = new Array(3);
+project[0] =  '<div class="row"><div class="col-sm-12 p-3 mt-3"><h2 style="text-align: center;">Konsola w stylu retro</h2><p>Oto nowe dzieło twórców... póki co absolutnie niczego! Najnowszy i już ostatni zawodnik ósmej generacji konsol wkracza na rynek z niezrównana mocą obliczeniową Raspberry Pi 4b i jej niezawodnym 4GB pamięci RAM! A jego imię to PWSZ-X!<br/><br/>Wyposażony w okrągłe 32GB pamięci SD i uzbrojony w zestaw Joysticka i czterech przycisków zaprojektowanych z myślą o prawdziwie oldskulowym doświadczeniu, ta bestia wytrzyma nawet najbardziej wymagające tytuły tej generacji, takie jak: [Tytuł gry]! [Tytuł gry]! [TTytuł gryBA]! I co najważniejsze, kandydat na grę roku [Tytuł gry]!</p></div><div class="col-md-6 p-3"><img src="img/konsola1.jpg" style="height: 220px;"></div><div class="col-md-6 p-3 d-none d-sm-block"><img src="img/konsola2.jpg" style="height: 220px;"></div><div class="col-sm-12 p-3"><p>Doświadcz przyszłości branży gier w rewolucyjnej rozdzielczości FullHD aż do dwóch graczy jednocześnie! A to wszystko całkowicie za darmo! To w końcu świetna cena!</p></div></div>';
+project[1] = '';
+project[2] = '';
+
+let projNr = 0; // Math.floor(Math.random()*3)
+
+let timerP1 = 0;
+let timerP2 = 0;
+let timerP3 = 0;
+function hideProject()
+{
+	$("#proj-content").fadeOut(500);
+}
+function changeProject()
+{
+	clearTimeout(timerS3);
+	
+	document.getElementById("proj-content").innerHTML = project[projNr];
+	$("#proj-content").fadeIn(500);
+
+}
+function setProject(nr)
+{
+	if(nr != projNr)
+	{
+		projNr = nr;
+		hideProject();
+		timer3 = setTimeout('changeProject()',500);
+	}
 
 }
