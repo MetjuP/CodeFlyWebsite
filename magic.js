@@ -1,4 +1,4 @@
-window.onload=Start;
+//window.onload=Start;
 
 const clicked = new Array(10);
 clicked[0]=false;
@@ -117,7 +117,6 @@ function Start()
 	$('#welcomeImg').fadeOut(1);
 	document.getElementById("welcomeImg").innerHTML = '<img  src="img/codefly/CodeFly_FlyOnly_Outline_White.png" alt="">';
 	$('#welcomeImg').fadeIn(2000);
-	document.getElementById('top').scrollIntoView({behavior: 'smooth'});
 
 	timer1 = setTimeout('showWelcome()',3000);
 }
